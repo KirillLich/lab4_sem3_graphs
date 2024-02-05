@@ -12,8 +12,6 @@ private:
 
 	template <typename IKey, typename IElement>
 	friend IDictionary<IKey, IElement>* MakeDictionary();
-	template <typename IKey, typename IElement>
-	friend IDictionary<IKey, IElement>* MakeDictionary(IDictionary<IKey, IElement>* DictionaryCopy);
 
 	Dictionary(const Dictionary& list) :container(list.container){};
 	Dictionary() :container(1) {};
@@ -63,10 +61,4 @@ template <typename TKey, typename TElement>
 inline IDictionary<TKey, TElement>* MakeDictionary()
 {
 	return new Dictionary<TKey, TElement>;
-}
-
-template <typename TKey, typename TElement>
-inline IDictionary<TKey, TElement>* MakeDictionary(IDictionary<TKey, TElement>* DictionaryCopy)
-{
-	return new Dictionary<TKey, TElement>(DictionaryCopy);
 }

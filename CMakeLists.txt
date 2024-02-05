@@ -8,6 +8,7 @@ project ("lab4_sem3(graphs_algos)")
 # Добавьте источник в исполняемый файл этого проекта.
 add_executable (CMakeTarget 
 "src/lab4_sem3(graphs_algos).cpp"
+#"src/Tests/tests.cpp"
 "src/lab4_sem3(graphs_algos).h"
 "src/Graph.h" 
 "src/PairHash.h"
@@ -15,6 +16,7 @@ add_executable (CMakeTarget
 "src/DictionaryStructs/IDictionary"
 "src/DictionaryStructs/HashTable"
 
+  "src/UI_funcs.h" 
 )
 
 # TODO: Добавьте тесты и целевые объекты, если это необходимо.
